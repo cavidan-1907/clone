@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/image/artlist.icon.png" type="image/x-icon">
+    <title>acount</title>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <i class="bi bi-list list1"></i>
+            <img class="hom" src="./assets/image/artlist.logo.svg" alt="">
+            <i class="bi bi-search"></i>
+        </div>
+        <ul class="center">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./music.html">Music</a></li>
+            <li><a href="">SFX</a></li>
+            <li><a href="">Footage</a></li>
+            <li><a href="./favorit.html">Favorit</a></li>
+            <li><a href="./plugins.html">Plugins</a></li>
+            <li><a href="./apps.html" class="ap">Apps</a></li>
+            <li><a href="">Enterprise</a></li>
+        </ul>
+        <div class="right">
+            <button class="login">Start Free Now</button>
+          
+            <a href="#" class="log"> <i class="bi bi-person-circle"></i> sign in</a>
+        </div>
+        <i class="bi bi-list list2"></i>
+    </nav>
+    <div class="nav2">
+        <i class="bi bi-x list2-icon"></i>
+        <div class="button">
+            <button class="login">Start Free Now</button>
+            <button class="logout"><i class="bi bi-box-arrow-left"></i> Logout</button>
+        </div>
+        <ul class="center">
+            <li><a href="./index.html">Home</a></li>
+            <hr>
+            <li><a href="./music.html">Music</a></li>
+            <hr>
+            <li><a href="">Sound Effects</a></li>
+            <hr>
+            <li><a href="">Footage</a></li>
+            <hr>
+            <li><a href="./favorit.html">Favorit</a></li>
+            <hr>
+            <li><a href="./plugins.html">Plugins</a></li>
+            <hr>
+            <li><a href="./apps.html">Apps</a></li>
+            <hr>
+            <li><a href="">Enterprise</a></li>
+        </ul>
+    </div>
+    <div class="nav3">
+        <i class="bi bi-x x2"></i>
+        <div class="button">
+        <h1>Library
+            Spotlight
+            For You</h1>
+        </div>
+        <ul class="center">
+            <li><a href="#">Enterprise</a></li>
+            <hr>
+            <li><a href="#">Artlist Blog</a></li>
+            <hr>
+            <li><a href="">Artlist Academy</a></li>
+            <hr>
+            <li><a href="">License & Terms
+            </a></li>
+            <hr>
+            <li><a href="">Favorit</a></li>
+            <hr>
+            <li><a href="">Plugins</a></li>
+            <hr>
+            <li><a href="">Help
+            </a></li>
+            <hr>
+            <li><a href="">Privacy Policy</a></li>
+        </ul>
+    </div>
+    <!-- <section class="acount">
+      <div class="acount1 container">
+            <div class="left">
+                <span>acount</span>
+                <button><i class="bi bi-person-circle"></i> Profil</button>
+                <button><i class="bi bi-kanban"></i>Plan & Bilings</button>
+            </div>
+            <div class="right"><h1>Profil</h1>
+            <div class="name">
+                <label for="">Full Name</label>
+                <h1>Cavidan Vəlizadə</h1>
+            </div>
+            <div class="email">
+                <label for="">Email</label>
+                <h1>Cavidanvelizade9@mail.com</h1>
+            </div>
+            
+            </div>
+      </div>
+    </section> -->
+    <section class="user">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="user-profile">
+                        <h2>User Profile</h2>
+                        <form id="userProfileForm">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" disabled>
+                            </div>
+                            <button style="background-color: #ffda2a;"  type="button"  class="btn" id="editProfileBtn">Edit Profile</button>
+                            <button type="button" style="background-color: #ffda2a;" class="btn" id="saveProfileBtn">Save Changes</button>
+                            <button style="background-color: #ffda2a;"  class="logout btn"><i class="bi bi-box-arrow-left"></i> Logout</button>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+    <section class="add-song">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="add-song-form">
+                        <h2 class="text-center mb-4">Add New Song</h2>
+                        <form id="newSongForm" class="form" style="background-color: black;">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Song Title</label>
+                                <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="artist" class="form-label">Artist</label>
+                                <input type="text" class="form-control" id="artist" name="artist" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="genre" class="form-label">Genre</label>
+                                <select id="genre" class="form-select" name="genre" required>
+                                    <option value="">Select Genre</option>
+                                    <option value="POP">POP</option>
+                                    <option value="Hip-Hop">Hip-Hop</option>
+                                    <option value="Piano">Piano</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="posterFile" class="form-label">Select Poster Image</label>
+                                <input type="file" class="form-control" id="posterFile" name="posterFile" accept="image/*" required>
+                                <img id="previewImage" src="" alt="Preview" class="img-preview">
+                            </div>
+                            <div class="mb-2">
+                                <label for="audioFile" class="form-label">Select Audio File</label>
+                                <input type="file" class="form-control" id="audioFile" name="audioFile" accept=".mp3" required>
+                                <audio class="mb-2" controls id="audioPlayer">
+                                    <source class="sour" src="" type="audio/mpeg">
+                                    Tarayıcınız ses dosyalarını desteklemiyor.
+                                  </audio>
+                                  
+                            </div>
+                            <div class="d-grid gap-2">
+                                <input type="submit" placeholder="Add Song" style="background-color: #ffda2a;"">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Song name</th>
+                <th>Janre</th>
+                <th>artist</th>
+                <th>edit</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+           
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/acount.js"></script>
+
+</body>
+
+</html>

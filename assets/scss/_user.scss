@@ -1,0 +1,122 @@
+.acount{
+    width: 100%;
+    padding-block: 50px;
+    .acount1{
+        @include between;
+        width: 100%;
+        .left{
+            width: 25%;
+            border: 1px solid #fff;
+       height: 100vh;
+       gap: 30px;
+            color: #fff;
+            @include start;
+            flex-direction: column;
+            font-size: 20px;
+button{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+        }
+        .right{
+            width: 75%;
+            border: 1px solid #fff;
+            min-height: 100vh;
+            @include start;
+            flex-direction: column;
+            gap: 30px;
+            .name,.email{
+color: #fff;
+label{
+    font-size:15px;
+}
+h1{
+    font-size:20px;
+}
+            }
+        }
+    }
+}
+.user{
+    color: #fff;
+    padding-block: 80px;
+}
+@media screen and (max-width:776px){
+.acount{
+    .acount1{
+        flex-direction: column;
+        .left,.right{
+            width: 100%;
+        }
+        .left{
+        height: 30vh;
+        }
+    }
+}
+.user-profile{
+    background-color: yellow;
+}
+}
+.add-song{
+    color: #fff;
+}
+/* Select elementine hover olduğunda */
+select:hover {
+    border-color: #6c757d;
+}
+
+/* Select elementi kapalıyken */
+select {
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Select elementi açıldığında */
+select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+#previewAudio{
+    margin: 10px 0;
+}
+#previewImage{
+    margin: 10px 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px dashed white;
+}
+#audioPlayer{
+    margin: 10px 0;
+}
+
+.form{
+    background-color: transparent !important;
+}
+table{
+    border: 1px solid white;
+    background-color:  transparent;
+    backdrop-filter: blur(20px);
+    color: #fff;
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 50%;
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar-thumb{
+     background-color: #ffda2a;
+    }
+    &::-webkit-scrollbar{
+     width: 2px;
+    }
+    button{
+        background-color: transparent;
+        color: #fff;
+    }
+    tr,td,th{
+        border: 1px solid white;
+        cursor: pointer; 
+      text-align: center;
+    }
+}

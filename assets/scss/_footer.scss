@@ -1,0 +1,117 @@
+footer {
+    background-color: #121213;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 32px;
+    gap: 20px;
+    .bottom{
+        width: 100%;
+        @include between;
+        flex-wrap: wrap;
+        span{
+            transition: all 0.5s ease;
+            &:hover{
+                color: #fff
+            }
+        }
+        ul{
+            @include center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            li{
+                a{
+                    i{
+                        color: #fff;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+    }
+    .top{
+        width: 100%;
+        @include between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+     .left{
+            @include start;
+            flex-direction: column;
+            width: 30%;
+            gap: 15px;
+min-width: 240px;
+            p{
+                color:#fff;
+            }
+            img{
+                color:#ffda2a;
+            }
+            .logos{
+                width: 35%;
+                height: 15%
+              }
+                
+        }
+        .right{
+            @include between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+       
+            width: 50%;
+            span{
+                color: #fff;
+            }
+            ul{
+             display: flex;
+             flex-direction: column;
+             gap: 5px;
+             p{
+                display: none;
+             }
+                li{
+                    a{
+                        color: #ffff;
+                        font-size: 15px;
+                        transition: all 0.5s ease;
+                        &:hover{
+                            color: #ffda2a;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+@media screen and (max-width:991px) {
+    footer{
+        .top{
+        flex-direction: column;
+    }
+}
+}
+@media screen and (max-width:771px) {
+    footer{
+        .top{
+        flex-direction: column;
+        .right{
+            flex-direction: column;
+            ul{
+                position: relative;
+                span{
+                   min-width: 200px;
+               
+                }
+                li{
+                    display: none;
+                    height: 0px;
+                }
+                p{
+                    display: none;
+
+                }
+            }
+        }
+    }
+}
+}

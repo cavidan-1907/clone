@@ -1,0 +1,638 @@
+.music1 {
+    background-image: url(../image/music-homepage-banner-1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+
+    .music11 {
+        @include center;
+        width: 100%;
+        flex-direction: column;
+        gap: 200px;
+        .bottom {
+            width: 100%;
+            @include center;
+            gap: 50px;
+            flex-wrap: wrap;
+           
+        }
+        .top {
+            @include between;
+            width: 100%;
+            padding-top: 40px;
+
+            .text {
+                width: 50%;
+                @include start;
+                gap: 20px;
+                flex-direction: column;
+                h1 {
+                    font-size: 50px;
+                    color: #f7bf53;
+                    font-weight: 600;
+                }
+                .button {
+                    width: 100%;
+                    @include start;
+                    gap: 20px;
+                    :nth-child(1) {
+                        padding: 10px 16px;
+                        border-radius: 25px;
+                        font-weight: 600;
+                        background-color: #ffda2a;
+                        transition: all 0.5s ease;
+                        filter: brightness(100%);
+                        font-size: 20px;
+                        &:hover {
+                            filter: brightness(50%);
+                        }
+                    }
+                    :nth-child(2) {
+                        padding: 10px 16px;
+                        border-radius: 25px;
+                        font-weight: 600;
+                        background-color: transparent;
+                        border: 1px solid #fff;
+                        transition: all 0.5s ease;
+                        color: #fff;  font-size: 20px;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .music1 {
+        padding: 40px 0;
+        .music11 {
+            gap: 100px;
+            .top {
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                .text {
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    h1 {
+                        font-size: 30px;
+                    }
+                    .button {
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.list {
+    width: 100%;
+    background-color: #121213;
+    .container {
+        .list11 {
+            padding: 30px 0;
+            @include center;
+            flex-direction: column;
+            width: 100%;
+            color: #fff;
+            gap: 20px;
+            .top {
+                @include center;
+                width: 100px;
+                background-color: #fff;
+                height: 2px;
+                opacity: 0.2;
+            }
+            .center {
+                padding: 30px 0;
+                @include center;
+                flex-direction: column;
+                width: 100%;
+                color: #fff;
+                gap: 20px;
+                text-align: center;
+                h1 {
+                    font-size: 35px;
+                    font-weight: 800;
+                    width: 60%;
+                }
+                p {
+                    font-size: 22px;
+                    font-weight: 300;
+                    width: 100%;
+                }
+            }
+            button{
+                padding: 8px 22px;
+                border-radius: 20px;
+                font-weight: 600;
+                background-color: #ffda2a;
+                transition: all 0.5s ease;
+                filter: brightness(100%);
+                &:hover {
+                    filter: brightness(50%);
+                }
+            }
+            .bottom {
+display: grid;
+width: 100%;
+grid-template-columns: repeat(6,1fr);
+                ul {
+                    @include start;
+                    flex-direction: column;
+                    li{
+                        display: flex;
+                        justify-content:flex-start;
+                        align-items: center;
+                        gap: 5px;
+                        width: 100%;
+                        i{
+                            font-size: 30px;
+                            color: #ffda2a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen  and (max-width:991px){
+    .list{
+        .container{
+        .list11{
+           .bottom{
+            grid-template-columns: repeat(3,1fr);
+           }
+        }
+    }
+}
+}
+
+
+@media screen  and (max-width:776px){
+    .list{
+        .container{
+        .list11{
+           .center{
+            h1{
+                width: 100%;
+                font-size: 20px;
+            }
+            p{
+                font-size: 16px;
+            }
+           }
+        }
+    }
+}
+}
+
+
+
+
+@media screen  and (max-width:571px){
+    .list{
+        .container{
+        .list11{
+           .bottom{
+            gap: 5px;
+            grid-template-columns: repeat(2,1fr);
+         ul{
+            li{
+                font-size: 10px;
+                i{
+                    font-size: 10px;
+                }
+            }
+         }
+           }
+        }
+    }
+}
+}
+
+.playlist{
+    width: 100%;
+    background-color: #121213;
+padding-block: 50px;
+ height: 100vh;
+border-top: 1px solid #fff;
+color: #fff;
+.playlist1{
+    width: 100%;
+    @include between;
+    .playsong{
+        width: 30%;
+        height: 90vh;
+        border: 1px solid #fff;
+        @include start;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        #search{
+            padding: 5px 10px;
+            font-size: 10px;
+            border-radius: 10px;
+      display: flex;
+      align-items: center;
+            width: 70%;
+           }
+        .song{
+            @include start;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+       overflow-y: scroll;
+       &::-webkit-scrollbar-thumb{
+        background-color: #ffda2a;
+       }
+       &::-webkit-scrollbar{
+        width: 2px;
+       }
+     
+            .item{
+                @include between;
+                justify-content: space-around;
+                width: 100%;
+           
+                padding:2px;
+                border-radius: 10px;
+                background-color: #4c5262;
+                .text{
+                    @include start;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                margin-top:18px;
+                width: 60%;
+                }
+
+                h1{
+                    font-size: 14px;
+                    white-space: nowrap;
+                  
+                    text-overflow: ellipsis;
+                }
+                p{
+                    font-size: 14px;
+                    width: 100%;
+                }
+                i{
+                    font-size: 15px;
+                }
+                .img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius:99999px;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius:99999px;
+                        object-fit: cover;
+                     
+                    }
+                }
+            }
+        }
+    }
+
+.button{
+    width: 100%;
+    @include center;
+    gap: 5px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    button{
+        padding: 5px 10px;
+                        border-radius: 25px;
+                        font-weight: 600;
+                        background-color: #ffda2a;
+                        transition: all 0.5s ease;
+                        filter: brightness(100%);
+                        font-size: 10px;
+                        &:hover {
+                            filter: brightness(50%);
+                        }
+    }
+}
+    .playimg{
+        width: 70%;
+        height: 90vh;
+        border: 1px solid #fff;
+        @include start;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar-thumb{
+         background-color: #ffda2a;
+        }
+        &::-webkit-scrollbar{
+         width: 2px;
+        }
+      
+        
+        h1{
+            font-size: 20px;
+            border-bottom: 1px solid #ffda2a;
+            display: inline-block;
+        }
+        .pop,.Piano,.Hiphop{
+            width: 100%;
+            @include start;
+            flex-direction: column;
+            gap: 1px;
+            .title{
+                width: 100%
+            }
+.image{
+    @include start;
+    white-space:nowrap;
+overflow-x: scroll;
+gap: 10px;
+    width: 100%;
+    padding: 4px 0;
+    &::-webkit-scrollbar-thumb{
+        background-color: #ffda2a;
+        cursor: pointer;
+       }
+       &::-webkit-scrollbar{
+        height: 4px;
+       }
+    .imag{
+        width: 120px;
+        height: 120px;
+        border-radius:99999px;
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius:99999px;
+            object-fit: cover;
+            overflow: hidden;
+         
+        }
+    }
+}
+
+}
+        }
+    }
+
+}
+
+
+@media screen and (max-width:991px) {
+    .playlist{
+        .playlist1{
+            .playsong{
+                width: 55%;
+            }
+            .playimg{
+                width: 45%;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width:571px) {
+    .playlist{
+        
+        .playlist1{
+            .playsong{
+                width: 100%;
+            }
+            .playimg{
+              display: none;
+            }
+            .filter{
+                display: block;
+            }
+        }
+    }
+}
+
+
+.music-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+h1{
+    font-size: 15px;
+}
+
+}
+
+.music-controls button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffc107; /* Sarı tonu */
+}
+.volume-control button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+    color: #ffc107; /* Sarı tonu */
+ 
+}
+
+.music-info {
+    flex-grow: 1;
+    text-align: center;
+}
+.progress {
+
+    height: 10px;
+ flex-grow: 1.2;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; /* İlave */
+}
+
+.progress .progress-bar {
+    /* İlerleme çubuğunun rengi */
+ /* Sarı tonu */
+    width: 100%; /* İlave */
+    height: 100%; /* İlave */
+    position: absolute; /* İlave */
+    top: 0; /* İlave */
+    left: 0; /* İlave */
+    appearance: none; /* İlave */
+    border: none; /* İlave */
+    border-radius: 5px; /* İlave */
+    outline: none; /* İlave */
+    background-color: #ffda2a;
+}
+input[type="range"] {
+  -webkit-appearance: none; /* Safari ve Chrome için varsayılan stilleri devre dışı bırak */
+  width: 100%;
+  height: 10px;
+  background: #ffda2a; /* Renk gradyanı */
+  border-radius: 5px;
+  outline: none; /* Odaklanıldığında kenarlığı kaldır */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Safari ve Chrome için varsayılan stilleri devre dışı bırak */
+  width: 20px;
+  height: 20px;
+  background:#121213; /* Başlangıçta beyaz renkte bir başlık */
+  border-radius: 50%; /* Yuvarlatılmış kenarlığı */
+  cursor: pointer; /* Fareyi el tipine dönüştür */
+  border: 2px solid #ccc; /* Kenarlık ekleyin */
+}
+
+
+.volume-control {
+    flex-grow: 0.1;
+  
+    display: flex;
+    align-items: center;
+}
+
+.time-control {
+    flex-grow: 1;
+margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.song-title{
+    font-size: 20px;
+}
+
+#video-container2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+display: none;
+    height: 350px;
+    overflow: hidden;
+    color: #ccc;
+   
+}
+.imag23 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    animation: rotateAnimation 10s linear infinite; /* 2 saniyə müddətində, linearna dövrələndirilən sonsuz animasiya */
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg); /* Başlanğıc rotasiya açısı */
+    }
+    to {
+        transform: rotate(360deg); /* 360 dərəcə (bir tam dövrə) rotasiya açısı */
+    }
+}
+
+    .yaz {
+        color: #ccc;
+        position: absolute;
+        top: 50%;
+        left:30%;
+        width: 50%;
+        text-align: start;
+        transform: translate(-50%, -50%);
+        button{
+            padding: 10px 14px;
+                            border-radius: 25px;
+                            font-weight: 600;
+                            background-color: #ffda2a;
+                            transition: all 0.5s ease;
+                            filter: brightness(100%);
+                            color: #fff;
+                            font-size: 20px;
+                            &:hover {
+                                filter: brightness(50%);
+                            }
+        }
+    }
+    
+
+.video21 {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    // height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width:771px){
+    .music-container{
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .time-control{
+        gap: 20px;
+  
+    }
+}
+.imag {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imag img {
+    display: block;
+    transition: filter 0.3s ease; /* Geçiş efekti için */
+  }
+  
+  .imag p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    white-space: wrap;
+    // background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0; /* Başlangıçta görünmez yapar */
+    transition: opacity 0.3s ease; /* Geçiş efekti için */
+  }
+  
+  .imag:hover img {
+    filter: brightness(70%); /* Resmi karartır */
+  }
+  
+  .imag:hover p {
+    opacity: 1; /* Metni görünür yapar */
+  }
+  
+  
